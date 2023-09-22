@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods Demo</title>
+    <style>
+  body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+      text-align: center;
+      padding: 5px;
+      background-color: #333;
+      color: white;
+    }
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>ARRAY</h1>
+    </header>
+    <div class="container">
+        <div class="box" id="pushDemo">
+            <h2>push()</h2>
+            <button onclick="thePush()">Click Me</button>
+        </div>
+        <div class="box" id="popDemo">
+            <h2>pop()</h2>
+            <button onclick="thePop()">Click Me</button>
+        </div>
+        <div class="box" id="asd">
+            <h2>slice(5)</h2>
+            <button onclick="theSlice()">Click Me</button>
+        </div>
+            
+    </div>
+    
+    <script>
+        let shoebrands = ["Nike", "Adidas", "New Balance", "Skechers", "Vans", "Converse", "TOMS", "Crocs"];
+
+        function thePush() {
+            shoebrands.push("Under Armour");
+            alert("Updated shoebrands: " + shoebrands.join(', '));
+        }
+
+        function thePop() {
+            let removedItem = shoebrands.pop();
+            if (removedItem !== undefined) {
+                alert("Item removed from the array: " + removedItem);
+            } else {
+                alert("Array is empty.");
+            }
+        }
+
+        function theSlice() {
+            let Slices = shoebrands.slice(5);
+            alert("Current shoe brands: " + Slices.join(', ')) 
+        }
+            
+    </script>
+    <footer>
+      <p>Footer</p>
+    </footer>
+</body>
+</html>
